@@ -1,0 +1,32 @@
+{
+    "version": "0.1.2",
+    "description": "Local-first persistent memory for AI coding agents: one binary over one SQLite database",
+    "homepage": "https://github.com/asanabrial/leteo",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/asanabrial/leteo/releases/download/v0.1.2/leteo-v0.1.2-x86_64-pc-windows-msvc.zip",
+            "hash": "5cd91549659f2bff39bdd5ffb46cda7c397c7167135efcfcb9597ff4c8ec50ed",
+            "extract_dir": "leteo-v0.1.2-x86_64-pc-windows-msvc"
+        }
+    },
+    "bin": "leteo.exe",
+    "checkver": {
+        "github": "https://github.com/asanabrial/leteo"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/asanabrial/leteo/releases/download/v$version/leteo-v$version-x86_64-pc-windows-msvc.zip",
+                "extract_dir": "leteo-v$version-x86_64-pc-windows-msvc"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/asanabrial/leteo/releases/download/v$version/SHA256SUMS"
+        }
+    },
+    "notes": [
+        "Set your agent up with:  leteo tui",
+        "Removing the package leaves ~/.leteo alone; 'leteo uninstall' is what takes the store."
+    ]
+}

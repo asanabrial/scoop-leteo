@@ -1,0 +1,30 @@
+name: Excavator
+
+# Scoop's own bucket automation, rather than a script written here.
+#
+# `checkver` in the manifest says where to look for a new version and
+# `autoupdate` says how to rewrite the URL and where the checksums are
+# published; this action runs both and commits the result. It is the same
+# machinery every bucket in the ecosystem uses, which means it is the machinery
+# that gets fixed when Scoop changes something.
+#
+# `GITHUB_TOKEN` is this repository's own — nothing here reaches into Leteo's
+# repository, it only reads its releases, which are public.
+
+on:
+  schedule:
+    - cron: "23 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  excavate:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ScoopInstaller/GithubActions@main
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          SKIP_UPDATED: "1"
