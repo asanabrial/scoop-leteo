@@ -1,13 +1,13 @@
 {
-    "version": "0.3.0",
+    "version": "0.4.1",
     "description": "Local-first persistent memory for AI coding agents: one binary over one SQLite database",
     "homepage": "https://github.com/asanabrial/leteo",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/asanabrial/leteo/releases/download/v0.3.0/leteo-v0.3.0-x86_64-pc-windows-msvc.zip",
-            "hash": "765999e7a32fd296edae506d3734c2ce17f06e7f7f7ebbba374ca7e05677ddab",
-            "extract_dir": "leteo-v0.3.0-x86_64-pc-windows-msvc"
+            "url": "https://github.com/asanabrial/leteo/releases/download/v0.4.1/leteo-v0.4.1-x86_64-pc-windows-msvc.zip",
+            "hash": "c6421c956dac180abb98fd7dbdc7df4fcba6ca068c448019f1d5938ec17d9148",
+            "extract_dir": "leteo-v0.4.1-x86_64-pc-windows-msvc"
         }
     },
     "bin": "leteo.exe",
